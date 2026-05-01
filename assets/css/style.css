@@ -1,0 +1,97 @@
+/* --- CONFIGURACIÓN BASE --- */
+.grid {
+    overflow: visible !important;
+    /* Permite que el resplandor salga de los bordes */
+}
+
+.card-aura {
+    position: relative;
+    z-index: 10;
+    /* La tarjeta está al frente */
+    background: #1a1a1a;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --- EL RESPLANDOR (AURA) --- */
+.card-aura::before {
+    content: "";
+    position: absolute;
+    /* Posición inicial centrada y pequeña */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+
+    /* Gradiente basado en la imagen de referencia */
+    background: linear-gradient(45deg,
+            #f97316,
+            /* Naranja intenso */
+            #3b82f6,
+            /* Azul neón */
+            #a855f7
+            /* Púrpura */
+        );
+
+    /* El desenfoque es lo que crea el efecto de luz difusa */
+    filter: blur(45px);
+    opacity: 0;
+    /* Oculto por defecto */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+    /* Detrás de la tarjeta */
+    pointer-events: none;
+    /* No interfiere con clics */
+}
+
+/* --- ESTADO AL PASAR EL MOUSE (HOVER) --- */
+.card-aura:hover::before {
+    opacity: 0.6;
+    /* Aparece el resplandor */
+    width: 115%;
+    /* Se expande más allá de la tarjeta */
+    height: 115%;
+}
+
+.card-aura:hover {
+    transform: translateY(-10px);
+    /* Elevación sutil */
+    border-color: rgba(249, 115, 22, 0.3);
+    /* Borde naranja tenue */
+}
+
+/* --- ESTILOS EXTRA --- */
+.carousel img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Asegura que los gradientes de Tailwind funcionen bien con el modo oscuro */
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.card-aura::before {
+    /* ... tus estilos anteriores ... */
+
+    /* Usamos las variables que envía el JS para centrar el brillo donde esté el mouse */
+    left: var(--mouse-x, 50%);
+    top: var(--mouse-y, 50%);
+}
+
+/* Estilo del Footer de Autoría */
+footer .bg-white\/5 {
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+footer .bg-white\/5:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(249, 115, 22, 0.3);
+    transform: translateY(-5px);
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+}

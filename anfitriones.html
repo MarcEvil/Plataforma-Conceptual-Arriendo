@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfitriones | Hogar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Usamos el CSS principal para el Aura -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0d0d0d] text-gray-200 selection:bg-orange-500">
+
+    <nav
+        class="flex justify-between items-center p-6 max-w-7xl mx-auto border-b border-white/10 bg-[#0d0d0d]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-white">
+            <a href="index.html">hogar<span class="text-orange-500">.</span></a>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+            <a href="index.html" class="hover:text-white transition">Explorar</a>
+            <a href="#" class="text-white border-b border-orange-500">Anfitriones</a>
+            <a href="experiencias.html" class="hover:text-white transition">Experiencias</a>
+        </div>
+        <button
+            class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-orange-500 hover:text-white transition shadow-lg shadow-orange-500/20">Mi
+            Cuenta</button>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center py-16 px-6">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">Conoce a tus <span
+                class="text-orange-500">Anfitriones</span></h1>
+        <p class="text-gray-400 text-lg">Hospitalidad con sello local y atención al detalle en cada rincón.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-20">
+        <!-- overflow-visible es CLAVE para ver el aura -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start overflow-visible">
+
+            <!-- Card: Luis Varas -->
+            <div
+                class="card-aura bg-[#1a1a1a] rounded-3xl p-8 border border-white/5 transition duration-500 group relative">
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative mb-6">
+                        <div
+                            class="w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500/20 group-hover:border-orange-500 transition duration-500">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                                alt="Luis Varas" class="w-full h-full object-cover">
+                        </div>
+                        <span
+                            class="absolute bottom-2 right-4 bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg">Superhost</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-1">Luis Varas</h2>
+                    <p class="text-orange-500 font-medium mb-6">Especialista en Experiencias Urbanas</p>
+                    <p class="text-gray-400 leading-relaxed mb-8 italic">
+                        "Mi objetivo es que cada huésped descubra el Santiago auténtico. Me encargo de que la tecnología
+                        y el confort superen tus expectativas."
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                            <span class="block text-white font-bold text-xl">+500</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Reseñas</span>
+                        </div>
+                        <div class="text-center bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                            <span class="block text-white font-bold text-xl">4.9</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Katherine Palomino -->
+            <div
+                class="card-aura bg-[#1a1a1a] rounded-3xl p-8 border border-white/5 transition duration-500 group relative">
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative mb-6">
+                        <div
+                            class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500/20 group-hover:border-blue-500 transition duration-500">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+                                alt="Katherine Palomino" class="w-full h-full object-cover">
+                        </div>
+                        <span
+                            class="absolute bottom-2 right-4 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg">Design
+                            Lead</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-1">Katherine Palomino</h2>
+                    <p class="text-blue-500 font-medium mb-6">Curadora de Estilo & Confort</p>
+                    <p class="text-gray-400 leading-relaxed mb-8 italic">
+                        "Creo firmemente que los pequeños detalles hacen la gran diferencia. He diseñado cada espacio
+                        pensando en la armonía y la calidez."
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                            <span class="block text-white font-bold text-xl">100%</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Respuesta</span>
+                        </div>
+                        <div class="text-center bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                            <span class="block text-white font-bold text-xl">5.0</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Hospitalidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section
+        class="max-w-4xl mx-auto px-6 py-10 bg-gradient-to-r from-orange-600 to-orange-500 rounded-3xl text-center mb-20 shadow-2xl shadow-orange-500/20 mx-6">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">¿Tienes alguna duda sobre tu estadía?</h3>
+        <p class="text-white/80 mb-6 font-medium">Luis y Katherine están disponibles para ayudarte a planificar tu viaje
+            perfecto.</p>
+        <button
+            class="bg-white text-orange-600 px-8 py-3 rounded-xl font-bold hover:bg-black hover:text-white transition transform hover:scale-105">Contactar
+            ahora</button>
+    </section>
+
+    <footer class="bg-[#0a0a0a] border-t border-white/5 pt-16 pb-8 mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+                <!-- Columna 1: Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="text-2xl font-bold tracking-tighter text-white mb-4">
+                        hogar<span class="text-orange-500">.</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Plataforma conceptual de arriendos diseñada para conectar la hospitalidad local con la
+                        tecnología de vanguardia.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Navegación -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Explorar</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li><a href="index.html" class="hover:text-orange-500 transition">Propiedades</a></li>
+                        <li><a href="anfitriones.html" class="hover:text-orange-500 transition">Anfitriones</a></li>
+                        <li><a href="experiencias.html" class="hover:text-orange-500 transition">Experiencias</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Servicios Técnicos -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Servicios Tech</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-[10px]"></i>
+                            Soporte IT</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-[10px]"></i>
+                            Desarrollo FullStack</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-[10px]"></i>
+                            Mantención Sanitaria</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Créditos de Autoría -->
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                    <h4 class="text-white font-bold text-sm mb-4">Diseño y Desarrollo</h4>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs">
+                            LV
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-bold">Marcelo Mardones</p>
+                            <p class="text-gray-500 text-[10px] uppercase tracking-tighter">IT Technician & Dev</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex gap-3">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-[11px] uppercase tracking-[0.2em]">
+                    &copy; 2026 Hogar Project — All Rights Reserved
+                </p>
+                <div class="flex gap-6 text-[11px] text-gray-600 uppercase tracking-widest font-medium">
+                    <span class="text-orange-500/50">Distinción Máxima 2024</span>
+                    <span>Santiago, CL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/anfitriones.js"></script>
+</body>
+
+</html>

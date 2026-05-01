@@ -1,0 +1,138 @@
+/* --- RESET & LAYOUT --- */
+/* Permitir que el resplandor (aura) sobresalga de los contenedores grid */
+.grid {
+    overflow: visible !important;
+}
+
+/* --- TARJETA BASE (MODO OSCURO) --- */
+.card-aura {
+    position: relative;
+    z-index: 10;
+    /* Eleva la tarjeta sobre el fondo */
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.4s ease;
+}
+
+/* --- EL RESPLANDOR TRICOLOR (AURA) --- */
+.card-aura::before {
+    content: "";
+    position: absolute;
+
+    /* Posicionamiento dinámico controlado por JS (--mouse-x, --mouse-y) */
+    top: var(--mouse-y, 50%);
+    left: var(--mouse-x, 50%);
+
+    /* Centramos el aura exactamente en el puntero */
+    transform: translate(-50%, -50%);
+
+    /* Tamaño dinámico que se expande en hover */
+    width: 60%;
+    height: 60%;
+
+    /* Gradiente basado en la estética de alta tecnología (Naranja, Azul, Púrpura) */
+    background: radial-gradient(circle,
+            rgba(249, 115, 22, 0.7) 0%,
+            /* Naranja central */
+            rgba(59, 130, 246, 0.5) 40%,
+            /* Azul intermedio */
+            rgba(168, 85, 247, 0.3) 100%
+            /* Púrpura periférico */
+        );
+
+    /* El blur crea el efecto de iluminación ambiental */
+    filter: blur(50px);
+
+    /* Oculto por defecto */
+    opacity: 0;
+
+    /* Transiciones suaves para la aparición, pero instantáneas para el movimiento */
+    transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+
+    z-index: -1;
+    /* Se sitúa detrás del contenido de la tarjeta */
+    pointer-events: none;
+    /* No bloquea clics en botones */
+}
+
+/* --- INTERACCIÓN (HOVER) --- */
+.card-aura:hover {
+    transform: translateY(-10px);
+    /* Elevación sutil */
+    border-color: rgba(249, 115, 22, 0.4);
+    /* Resalte naranja en el borde */
+}
+
+.card-aura:hover::before {
+    opacity: 0.6;
+    /* Aparece el resplandor */
+    width: 120%;
+    /* El aura crece más que la tarjeta */
+    height: 120%;
+}
+
+/* --- ESTILOS DE ELEMENTOS INTERNOS --- */
+/* Contenedores de imagen redondeados solo arriba */
+.card-aura .relative.overflow-hidden {
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* Efecto Zoom en imágenes al pasar el mouse */
+.card-aura img {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-aura:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo para los botones de acción interna */
+.card-aura button {
+    position: relative;
+    z-index: 20;
+    /* Asegura que el botón esté siempre clickeable */
+}
+
+/* --- UTILIDADES GLOBALES --- */
+/* Glassmorphism para el Navbar */
+nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(13, 13, 13, 0.8);
+}
+
+/* Animación de pulso para badges (como "Superhost" o "Nuevo") */
+@keyframes pulse-soft {
+    0% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+    }
+}
+
+.bg-orange-500.text-white.text-\[10px\] {
+    animation: pulse-soft 2s infinite;
+}
+
+/* Estilo del Footer de Autoría */
+footer .bg-white\/5 {
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+footer .bg-white\/5:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(249, 115, 22, 0.3);
+    transform: translateY(-5px);
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias | Hogar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Usamos el CSS global -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0d0d0d] text-gray-200 selection:bg-orange-500">
+
+    <!-- Navbar -->
+    <nav
+        class="flex justify-between items-center p-6 max-w-7xl mx-auto border-b border-white/10 bg-[#0d0d0d]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-white">
+            <a href="index.html">hogar<span class="text-orange-500">.</span></a>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+            <a href="index.html" class="hover:text-white transition">Explorar</a>
+            <a href="anfitriones.html" class="hover:text-white transition">Anfitriones</a>
+            <a href="#" class="text-white border-b border-orange-500">Experiencias</a>
+        </div>
+        <button
+            class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-orange-500 hover:text-white transition shadow-lg shadow-orange-500/20">
+            Mi Cuenta
+        </button>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center py-16 px-6">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Vive como un <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">local.</span></h1>
+        <p class="text-gray-400 text-lg">Seleccionamos las mejores vivencias de Santiago para que tu estadía sea
+            inolvidable.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+        <!-- grid con overflow visible para el Aura -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-visible">
+
+            <!-- Experiencia 1 -->
+            <div class="card-aura bg-[#1a1a1a] rounded-3xl border border-white/5 group transition-all duration-500">
+                <div class="relative h-72 overflow-hidden rounded-t-3xl">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                        Gastronomía</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Ruta de Cafés de Autor</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Descubre los secretos del Barrio Italia a
+                        través de sus mejores tostadores de café artesanal.</p>
+                    <div class="flex justify-between items-center border-t border-white/5 pt-4">
+                        <span class="text-orange-400 font-bold text-sm">Desde $15.000</span>
+                        <button
+                            class="text-white text-xs font-semibold bg-white/10 px-4 py-2 rounded-lg hover:bg-orange-500 transition">Saber
+                            más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 2 -->
+            <div class="card-aura bg-[#1a1a1a] rounded-3xl border border-white/5 group transition-all duration-500">
+                <div class="relative h-72 overflow-hidden rounded-t-3xl">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                        Aventura</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Sunset en el Manquehuito</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Un trekking guiado para ver el atardecer más
+                        espectacular de Santiago sobre la cordillera.</p>
+                    <div class="flex justify-between items-center border-t border-white/5 pt-4">
+                        <span class="text-orange-400 font-bold text-sm">Desde $25.000</span>
+                        <button
+                            class="text-white text-xs font-semibold bg-white/10 px-4 py-2 rounded-lg hover:bg-orange-500 transition">Saber
+                            más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 3 -->
+            <div class="card-aura bg-[#1a1a1a] rounded-3xl border border-white/5 group transition-all duration-500">
+                <div class="relative h-72 overflow-hidden rounded-t-3xl">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                        Cultura</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Tour de Viñedos Boutique</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Visita bodegas familiares en el Valle del
+                        Maipo con cata privada de vinos premium.</p>
+                    <div class="flex justify-between items-center border-t border-white/5 pt-4">
+                        <span class="text-orange-400 font-bold text-sm">Desde $45.000</span>
+                        <button
+                            class="text-white text-xs font-semibold bg-white/10 px-4 py-2 rounded-lg hover:bg-orange-500 transition">Saber
+                            más</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="max-w-4xl mx-auto py-20 px-6 text-center">
+        <div class="inline-block p-1 bg-orange-500/20 rounded-full mb-6">
+            <div
+                class="bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase italic shadow-lg shadow-orange-500/20">
+                Nómadas Digitales</div>
+        </div>
+        <h2 class="text-3xl font-bold text-white mb-6 italic">"No solo arrendé un departamento, conocí la ciudad desde
+            adentro gracias a las recomendaciones de Luis y Katherine."</h2>
+        <p class="text-gray-500">— James R., Reino Unido</p>
+    </section>
+
+    <footer class="bg-[#0a0a0a] border-t border-white/5 pt-16 pb-8 mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+                <!-- Columna 1: Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="text-2xl font-bold tracking-tighter text-white mb-4">
+                        hogar<span class="text-orange-500">.</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Plataforma conceptual de arriendos diseñada para conectar la hospitalidad local con la
+                        tecnología de vanguardia.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Navegación -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Explorar</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li><a href="index.html" class="hover:text-orange-500 transition">Propiedades</a></li>
+                        <li><a href="anfitriones.html" class="hover:text-orange-500 transition">Anfitriones</a></li>
+                        <li><a href="experiencias.html" class="hover:text-orange-500 transition">Experiencias</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Servicios Técnicos -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Servicios Tech</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-[10px]"></i>
+                            Soporte IT</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-[10px]"></i>
+                            Desarrollo FullStack</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-[10px]"></i>
+                            Mantención Sanitaria</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Créditos de Autoría -->
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                    <h4 class="text-white font-bold text-sm mb-4">Diseño y Desarrollo</h4>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs">
+                            LV
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-bold">Marcelo Mardones</p>
+                            <p class="text-gray-500 text-[10px] uppercase tracking-tighter">IT Technician & Dev</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex gap-3">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-[11px] uppercase tracking-[0.2em]">
+                    &copy; 2026 Hogar Project — All Rights Reserved
+                </p>
+                <div class="flex gap-6 text-[11px] text-gray-600 uppercase tracking-widest font-medium">
+                    <span class="text-orange-500/50">Distinción Máxima 2024</span>
+                    <span>Santiago, CL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/exper.js"></script>
+</body>
+
+</html>

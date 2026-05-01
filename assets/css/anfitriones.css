@@ -1,0 +1,118 @@
+/* --- CONFIGURACIÓN DE LAYOUT --- */
+/* Importante: Permitir que el resplandor sobresalga de la grilla */
+.grid {
+    overflow: visible !important;
+}
+
+/* --- TARJETA BASE (MODO OSCURO) --- */
+.card-aura {
+    position: relative;
+    z-index: 10;
+    /* La tarjeta siempre arriba */
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    /* Equivalente a rounded-3xl */
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.4s ease;
+    cursor: default;
+}
+
+/* --- EL RESPLANDOR TRICOLOR (AURA) --- */
+.card-aura::before {
+    content: "";
+    position: absolute;
+
+    /* Posicionamiento dinámico controlado por JavaScript */
+    /* El 50% es el valor inicial centrado */
+    top: var(--mouse-y, 50%);
+    left: var(--mouse-x, 50%);
+
+    /* Centramos el aura sobre el punto del mouse */
+    transform: translate(-50%, -50%);
+
+    /* Tamaño inicial */
+    width: 60%;
+    height: 60%;
+
+    /* Gradiente tricolor basado en tu paleta de marca */
+    background: radial-gradient(circle,
+            rgba(249, 115, 22, 0.8) 0%,
+            /* Naranja */
+            rgba(59, 130, 246, 0.6) 45%,
+            /* Azul */
+            rgba(168, 85, 247, 0.4) 100%
+            /* Púrpura */
+        );
+
+    /* El desenfoque crea la sensación de luz neón */
+    filter: blur(50px);
+
+    /* Oculto por defecto, se activa en hover */
+    opacity: 0;
+
+    /* Transiciones: La opacidad y el tamaño son suaves, 
+       pero el movimiento (top/left) es instantáneo para seguir al mouse */
+    transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+
+    z-index: -1;
+    /* Detrás de la tarjeta */
+    pointer-events: none;
+    /* No interfiere con botones o links */
+}
+
+/* --- ESTADO HOVER --- */
+.card-aura:hover {
+    transform: translateY(-10px);
+    border-color: rgba(249, 115, 22, 0.4);
+    /* Resalte naranja sutil en el borde */
+}
+
+.card-aura:hover::before {
+    opacity: 0.6;
+    /* Brillo visible */
+    width: 120%;
+    /* El aura se expande más allá de los bordes */
+    height: 120%;
+}
+
+/* --- AJUSTES PARA ANFITRIONES (AVATARES) --- */
+/* Asegura que las fotos circulares no pierdan calidad ni forma */
+.card-aura img {
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.5s ease;
+}
+
+.card-aura:hover img {
+    transform: scale(1.03);
+}
+
+/* --- UTILIDADES EXTRA --- */
+/* Glassmorphism para el navbar */
+nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Estilo para los botones de "Reservar" */
+.card-aura button {
+    position: relative;
+    z-index: 20;
+    /* Asegura que sean clicables sobre el aura */
+}
+
+/* Estilo del Footer de Autoría */
+footer .bg-white\/5 {
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+footer .bg-white\/5:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(249, 115, 22, 0.3);
+    transform: translateY(-5px);
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+}
